@@ -4,16 +4,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  background-color: #231f25;
+  /* background: linear-gradient(45deg, #be1bd3, #4d25a0, #be1bd3); */
+  /* background: linear-gradient(45deg, rgb(162 27 211 / 43%), rgb(77 37 160 / 57%), rgb(190 27 211 / 52%)); */
+
+}
+
+.container svg:hover {
+  cursor: pointer;
 }
 
 .dialog {
-  background-color: white;
-  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.1), -10px -10px 10px rgb(0, 0, 0, 0.1);
+  /* background: linear-gradient(45deg, #4d25a0, #be1bd3, #6c19cd); */
+  /* box-shadow: 10px 10px 90px rgba(223, 25, 190, 0.395), -10px -10px 90px rgba(223, 25, 190, 0.395); */
+  /* box-shadow: 10px 10px 90px rgba(223, 25, 190, 0.395), -10px -10px 90px rgba(223, 25, 190, 0.395); */
   width: 90%;
   height: 90%;
-  margin: auto;
+  margin: auto 1%;
   display: flex;
 }
+
+/* linear-gradient(45deg, rgb(162 27 211 / 43%), rgb(77 37 160 / 57%), rgb(190 27 211 / 52%)) */
 
 .agent,
 .description,
@@ -22,64 +34,187 @@
 }
 
 .agent-type {
-  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 200;
+  height: 100%;
+  text-transform: uppercase;
 }
 
-.agent-type .valoImg {
-  margin-left: 15%;
-  margin-top: 5%;
-}
+
 
 .details {
   display: flex;
   flex-direction: column;
-  margin-left: 15%;
 }
 
-.name {
-  font-size: 36px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.passport-photo {
+  border: 2px solid white;
+  width: 200px;
 }
 
-.role {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.role p {
-  margin: 0px;
-
-}
-
-.role-img {
-  width: 60px;
-  height: 60px;
-  padding: 10px;
-  background-color: rgb(151, 176, 196);
-}
 
 .description {
-  background-color: antiquewhite;
+  /* background-color: rgba(148, 95, 204, 0.256); */
+  background-color: #231f25;
+  height: 100%;
+  color: white;
 }
 
 .desc-div {
-  margin: 25% 5% 0%;
+  margin: 5% 5% 0%;
   display: flex;
   flex-direction: column;
   font-size: 20px;
-  gap: 40px;
+  gap: 20px;
 }
 
+.valoImg {
+  align-self: flex-end;
+  filter: brightness(0) invert(1);
+}
 
 .abilities {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .abilities img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
+}
+
+.yes-filter-img {
+  filter: brightness(0) invert(1);
+}
+
+.no-filter-img {
+  filter: brightness(1) invert(0);
+}
+
+.abilities img:hover {
+  cursor: pointer;
+}
+
+.agent-des {
+  margin: 0 2%;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.ability-des {
+  margin: 0 2%;
+  font-size: 16px;
+}
+
+.agent {
+  display: flex;
+  margin: auto 0;
+  overflow: hidden;
+}
+
+
+.agent-pic {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  background-color: #231f25;
+}
+
+
+.name {
+  margin: 0;
+  line-height: 120px;
+  font-size: 120px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255 172 111);
+}
+
+.role {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  margin-left: 25px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.play {
+  background-color: rgb(255, 37, 37);
+  color: white;
+  width: 200px;
+  text-align: center;
+  outline: 2px solid #fff;
+  border: none;
+  outline-offset: 3px;
+  padding: 20px 20px;
+  align-self: center;
+}
+
+.agent-type-parent {
+  flex: 1;
+  height: 100%;
+  background-color: #231f25;
+  /* background-color: rgb(255, 211, 247); */
+}
+
+.role-des {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0 2%
+}
+
+.role-heading {
+  font-size: 28px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: rgb(255 172 111);
+  margin: 4% 2% 0;
+}
+
+.ability-des {
+  margin: 0 2%;
+}
+
+.ability-des-heading {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.ability-heading {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 37, 37);
+  margin-bottom: 0%;
+}
+
+.ability-name {
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+}
+
+.ability-types {
+  display: flex;
+  justify-content: space-between;
+}
+
+.play:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }

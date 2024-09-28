@@ -1,0 +1,20 @@
+.clove-dialog {
+    /* background: linear-gradient(45deg, rgb(77, 37, 160), rgb(190, 27, 211), rgb(108, 25, 205), 78%, 45%); */
+    /* box-shadow: 10px 10px 90px rgba(223, 25, 190, 0.395), -10px -10px 90px rgba(223, 25, 190, 0.395); */
+    box-shadow: 10px 10px 90px rgba(223, 25, 190, 0.395), -10px -10px 90px rgba(223, 25, 190, 0.395);
+}
+
+.clove-container {
+    background: linear-gradient(45deg, #a21bd36e, #4d25a091, #be1bd385)
+
+}
+
+
+.cypher-dialog {
+    background: linear-gradient(133deg, #171717b8, #ab6f4ebf, #69513dcc, #000000ad);
+    box-shadow: 10px 10px 90px rgb(33 18 6), -10px -10px 90px rgb(0 0 0)
+}
+
+.cypher-container {
+    background: linear-gradient(133deg, #171717b8, #ab6f4ebf, #69513dcc, #000000ad);
+}

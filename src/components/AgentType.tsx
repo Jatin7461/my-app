@@ -1,19 +1,46 @@
+import { motion, AnimatePresence } from "framer-motion"
+import { useContext, useRef } from "react"
+import { AgentContext } from "../store/AgentsProvider"
+
 export default function AgentType() {
-    return <div className="agent-type">
 
-        <img className="valoImg" src="valorant.png" width="30%" />
+    const { index, agentsList, showing } = useContext(AgentContext)
 
-        <div className="details">
-            <p className="name">CLOVE</p>
-            <div className="role">
-                <div className="role-img">
-                    <img src="controller.png" width="100%"  />
+
+    const ref = useRef(null);
+
+    return <div
+
+        className="agent-type-parent"
+    >
+        <AnimatePresence>
+
+            {showing && <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                exit={{ y: -100, opacity: 0 }}
+
+                className="agent-type">
+
+
+
+                <div className="details">
+
+                    <div className="name-role">
+                        <p className="role">{agentsList[index].role}</p>
+                        <p className="name">{agentsList[index].name}</p>
+                    </div>
                 </div>
-                <div>
-                    <p className="role-heading">Role</p>
-                    <p className="role-name">Controller</p>
-                </div>
-            </div>
-        </div>
+
+                <input type="hidden" ref={ref}></input>
+                <button id="play-button" onMouseEnter={() => {
+                    // const audio = new Audio('play.mp3')
+                    // audio.play()
+                }} className="play">
+                    PLAY FOR FREE
+                </button>
+            </motion.div>}
+        </AnimatePresence>
     </div>
 }
